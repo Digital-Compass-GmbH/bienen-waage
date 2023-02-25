@@ -66,7 +66,7 @@ def cleanAndExit():
 
 def get_offset():
     f = open("offset.txt", "r")
-    return(float(f.read()))
+    return Decimal(f.read())
 
 def set_offset(offset):
     with open('offset.txt', 'w') as f:
