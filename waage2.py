@@ -20,7 +20,7 @@ MAX_Length = 30  # how many measurements is a beekeeper active
 getcontext().prec = 5  # rounding of weight
 record = list()  # store of weight
 
-key = "GTH3916MTMVILT7X"  # Things Speak API Key
+
 sensor = Adafruit_DHT.DHT11
 pin = 4  # Pin on Raspi
 EMULATE_HX711 = False
@@ -73,7 +73,11 @@ def set_offset(offset):
         f.write(str(offset))
     f.close()
 
+def get_key():
+    f = open("key.txt", "r")
+    return f.read()
 
+key = get_key()
 hx = HX711(5, 6)
 hx.set_reading_format("MSB", "MSB")
 hx.set_reference_unit(referenceUnit)
