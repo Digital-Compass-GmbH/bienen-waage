@@ -77,6 +77,7 @@ def get_key():
     f = open("key.txt", "r")
     return f.read().rstrip()
 
+time.sleep(10)
 key = get_key()
 hx = HX711(5, 6)
 hx.set_reading_format("MSB", "MSB")
