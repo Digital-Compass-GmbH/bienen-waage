@@ -14,7 +14,7 @@ from decimal import *
 
 ###########User variables ############
 intervall = 300  # sending intervall in sec default: 300
-printOn = True  # default False, use True for debugging
+printOn = False  # default False, use True for debugging
 beekeeper_active = False  # flag set on, when weight change from last period above threashold
 threashold_weight = 1  # in kg
 MAX_Length = 30  # how many measurements is a beekeeper active
