@@ -109,9 +109,9 @@ while True:
             del record[0]
         record.append(curr_weight)
         weight = curr_weight + offset
-        set_offset(weight)
 
         send()
+        set_offset(weight)
         hx.power_down()
         hx.power_up()
         time.sleep(intervall)
