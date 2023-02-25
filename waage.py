@@ -13,7 +13,7 @@ import time
 from decimal import *
 
 ###########User variables ############
-intervall = 60  # sending intervall in sec default: 300
+intervall = 300  # sending intervall in sec default: 300
 printOn = True  # default False, use True for debugging
 beekeeper_active = False  # flag set on, when weight change from last period above threashold
 threashold_weight = 1  # in kg
@@ -68,6 +68,7 @@ def cleanAndExit():
 def get_offset():
     f = open(os.path.join(sys.path[0],"offset.txt"), "r")
     return Decimal(f.read())
+
 
 def set_offset(offset):
     with open(os.path.join(sys.path[0],'offset.txt'), 'w') as f:
