@@ -1,10 +1,11 @@
 #! /usr/bin/python2
 import sys
 
-sys.path.append('Adafruit_Python_DHT')
-sys.path.append('hx711py')
-import time
 import sys
+import os
+sys.path.append(os.path.join(sys.path[0], 'Adafruit_Python_DHT'))
+sys.path.append(os.path.join(sys.path[0], 'hx711py'))
+import time
 import Adafruit_DHT
 import httplib
 import urllib
