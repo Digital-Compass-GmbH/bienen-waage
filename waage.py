@@ -66,16 +66,16 @@ def cleanAndExit():
 
 
 def get_offset():
-    f = open("offset.txt", "r")
+    f = open(os.path.join(sys.path[0],"offset.txt"), "r")
     return Decimal(f.read())
 
 def set_offset(offset):
-    with open('offset.txt', 'w') as f:
+    with open(os.path.join(sys.path[0],'offset.txt'), 'w') as f:
         f.write(str(offset))
     f.close()
 
 def get_key():
-    f = open("key.txt", "r")
+    f = open(os.path.join(sys.path[0],"key.txt"), "r")
     return f.read().rstrip()
 
 time.sleep(10)
