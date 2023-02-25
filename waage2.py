@@ -75,7 +75,7 @@ def set_offset(offset):
 
 def get_key():
     f = open("key.txt", "r")
-    return f.read()
+    return f.read().rstrip()
 
 key = get_key()
 hx = HX711(5, 6)
